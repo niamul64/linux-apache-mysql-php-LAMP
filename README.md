@@ -7,4 +7,5 @@ Or, https://www.youtube.com/watch?v=vazRx1Ei8VA
 
 ## If any problem to activate the apache then
 $ sudo ufw active
-
+$
+## run php code : https://www.youtube.com/watch?v=Vd2aLTZDLQg
