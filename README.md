@@ -7,7 +7,7 @@ https://gist.github.com/UbuntuEvangelist/9d115b4ca95c330ef6d2dd42f6c133c9
 ## follow:
 https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04
 
-Or, https://www.youtube.com/watch?v=vazRx1Ei8VA
+Or, https://www.youtube.com/watch?v=46_hyK-uBrQ&t=8s
 ### keep security lite install php my admin
 
 <hr> 

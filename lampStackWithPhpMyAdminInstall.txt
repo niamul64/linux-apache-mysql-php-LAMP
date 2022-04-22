@@ -1,0 +1,108 @@
+# step1-> install apache2:
+sudo apt install apache2 -y
+check status: 
+	sudo ufw status
+enable the status:
+	sudo ufw enable
+	
+sever status:
+	service apache2 status
+allow all request to appache2:	
+	sudo ufw app list
+	sudo ufw allow in "Apache Full"
+<br>
+ 
+# step3-> install mysql:
+	sudo apt install mysql-server -y
+enter to mysql: 
+	sudo mysql
+now we can run database commands like 
+	>show databases;
+now exit from mysql promt:
+	>exit	
+
+## need to create user and set pass letter after php install	
+
+<br>
+ 
+# step3-> install PHP: 
+	sudo apt install php php-mysql libapache2-mod-php -y
+check vertion:
+	php -v
+	
+# give read and write permission to a folder:
+	sudo chown -R $USER:USER /var/www/folder
+# give file create: cd to the directory and type
+	touch ~/Templates/Empty Document
+	
+# install phpMyAdmin
+	sudo apt install php-mbstring php-zip ph-gd php-curl php-json -y
+	sudo apt install phpmyadmin -y  
+
+<hr>
+
+if there is any access issue then abourt the installation and enter to mysql promt at terminal and run commands: 
+1. update mysql.user set plugin = 'mysql_native_password' where User='root';
+2. FLUSH PRIVILEGES;
+3. exit;	
+<hr>
+	
+set password for phpmyadmin: phpmyadmin
+	sudo systemctl restart apache2
+
+# Now set pass for mysql root user
+	sudo mysql
+  see all user with pass:
+  > SELECT user,authentication_string,plugin,host FROM mysql.user;
+  
+  set password: (pass: password)
+   ALTER USER ‘root’@‘localhost’ IDENTIFIED WITH caching_sha2_password BY ‘password’;
+Now we will see pass for root by typing:
+   SELECT user,authentication_string,plugin,host FROM mysql.user;
+Now exit from mysql promt
+   exit
+
+# enter to mysql after password setting:
+	sudo mysql -p
+	
+# create new user for mysql
+	sudo mysql -p
+  inside myql promt:
+  > create user 'userName'@'localhost' identified with caching_sh2_password by 'password';
+Now we will see pass for new created user by typing:
+  >SELECT user,authentication_string,plugin,host FROM mysql.user;
+Now we need to give privilages to this user 
+  > GRANT ALL PRIVILEGES ON *.* TO ‘userName’@‘localhost’ WITH GRANT OPTION;	
+  
+Now exit from mysql promt
+   exit
+   
+Once again
+ sudo systemctl restart apache2
+ sudo systemctl restart mysql
+
+<hr>
+	
+# NOW filnally:
+
+PHP My Admin:
+	userName: phpmyadmin
+	pass : phpmyadmin
+mysql users:
+	1: 
+	 user name: root
+	 pass: password
+	2: 
+	 user name: userName
+	 pass: password
+	 
+<hr>	 
+		
+# Enter to the phpmyadmin: localhost/phpmyadmin
+	enter through new user:
+		user name: userName
+	 	pass: password
+		
+you can follow: https://www.youtube.com/watch?v=46_hyK-uBrQ
+	
+
