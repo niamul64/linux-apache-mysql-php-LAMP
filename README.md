@@ -29,7 +29,7 @@ This project file is need to be inside computer/var/www/
 ## default and vertual host are at--> /etc/apache2/sites-available/
 
 ```
-inside: sites/apache2/sites-available/smbFileSystem.conf
+inside: etc/apache2/sites-available/smbFileSystem.conf
 <VirtualHost *:80>
     ServerName smbFileSystem.com
     ServerAlias www.smbFileSystem.com 
@@ -52,6 +52,8 @@ $ sudo service apache2 restart
 ##  disable runing server:
 $ sudo a2dissite smbFileSystem.conf
 $ sudo service apache2 restart
+$ service apache2 status
+$
 
 
 
