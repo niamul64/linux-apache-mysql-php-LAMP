@@ -56,11 +56,14 @@ set password for phpmyadmin: phpmyadmin
   > SELECT user,authentication_string,plugin,host FROM mysql.user;
   
   set password: (pass: password)
-   ALTER USER ‘root’@‘localhost’ IDENTIFIED WITH caching_sha2_password BY ‘password’;
+   ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'password';
 Now we will see pass for root by typing:
    SELECT user,authentication_string,plugin,host FROM mysql.user;
 Now exit from mysql promt
    exit
+
+# Now to enter in mysql shell: sudo mysql -u root -p
+Here you will be asked to give password of mysql
 
 # enter to mysql after password setting:
 	sudo mysql -p
