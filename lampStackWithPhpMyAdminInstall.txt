@@ -104,5 +104,7 @@ mysql users:
 	 	pass: password
 		
 you can follow: https://www.youtube.com/watch?v=46_hyK-uBrQ
+
+see password auth set: mysql> show variables like 'validate_passwords%'
 	
 
