@@ -71,7 +71,7 @@ Here you will be asked to give password of mysql
 # create new user for mysql
 	sudo mysql -p
   inside myql promt:
-  > create user 'userName'@'localhost' identified with caching_sh2_password by 'password';
+  > create user 'userName'@'localhost' identified with caching_sha2_password by 'password';
 Now we will see pass for new created user by typing:
   >SELECT user,authentication_string,plugin,host FROM mysql.user;
 Now we need to give privilages to this user 
