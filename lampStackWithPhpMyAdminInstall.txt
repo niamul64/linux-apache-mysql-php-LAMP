@@ -1,3 +1,5 @@
+Log in to mysql root user after seting the password: sudo mysql -u root -p
+
 # step1-> install apache2:
 sudo apt install apache2 -y
 check status: 
